@@ -1,6 +1,6 @@
 *** Settings ***
 Library    SeleniumLibrary
-Variables    ../resources/variables.yaml # Variable ဖိုင်ကို လမ်းကြောင်းညွှန်ပြီး ချိတ်ဆက်တာပါ
+Variables    ../resources/variables.yaml 
 
 *** Test Cases ***
 Simple Web Test With Variables

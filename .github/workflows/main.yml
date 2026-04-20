@@ -19,3 +19,12 @@ jobs:
 
       - name: Run Robot Tests
         run: robot tests/
+        
+#Step 6 > Viewing Reports
+      - name: Upload Test Results
+        uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: robot-report
+          path: report.html
+

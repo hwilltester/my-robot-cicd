@@ -1,6 +1,14 @@
 name: Robot Framework CI
 
-on: [push]
+on:
+  push:
+    branches: [ main ]
+  # ဒီအပိုင်းကို အသစ်ထည့်လိုက်တာပါ
+  schedule:
+    # ဥပမာ - မြန်မာစံတော်ချိန် ညတိုင်း (၉:၃၀) နာရီမှာ run ခိုင်းတာ (UTC 3:00 PM)
+    - cron: '0 15 * * *'
+  # Button နှိပ်ပြီး ကိုယ်တိုင် run ချင်ရင် ဒါလေးပါ ထည့်ထားပါ
+  workflow_dispatch:
 
 jobs:
   run-tests:

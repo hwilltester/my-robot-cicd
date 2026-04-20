@@ -17,8 +17,12 @@ jobs:
       - name: Install Dependencies
         run: pip install -r requirements.txt
 
+      #- name: Run Robot Tests
+       # run: robot tests/
+
       - name: Run Robot Tests
-        run: robot tests/
+        run: robot -i Smoke tests/ # -i ဆိုတာ include (ထည့်သွင်းရန်) လို့ အဓိပ္ပာယ်ရပါတယ်။
+
 # Chrome Driver ကို စက်ထဲမှာ အသင့်ဖြစ်အောင် လုပ်ပေးတာ
       - name: Setup Chrome
         uses: browser-actions/setup-chrome@v1

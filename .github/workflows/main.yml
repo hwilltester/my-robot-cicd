@@ -18,7 +18,13 @@ jobs:
         run: pip install -r requirements.txt
 
       - name: Run Robot Tests
-        run: robot tests/
+        # -V ဆိုတာ Variable file ကို ညွှန်းတာပါ။
+        # --variablefile လို့ အရှည်ရေးလည်း ရပါတယ်။
+        run: robot -V resources/staging_variables.yaml tests/
+  
+
+      #- name: Run Robot Tests
+      #  run: robot tests/
 
       #- name: Run Robot Tests
       #  run: robot -i Smoke tests/ # -i ဆိုတာ include (ထည့်သွင်းရန်) လို့ အဓိပ္ပာယ်ရပါတယ်။

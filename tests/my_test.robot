@@ -1,6 +1,6 @@
 *** Settings ***
 Library    SeleniumLibrary
-Variables    ../resources/variables.yaml 
+# Variables    ../resources/variables.yaml 
 
 *** Test Cases ***
 Simple Web Test With Variables
